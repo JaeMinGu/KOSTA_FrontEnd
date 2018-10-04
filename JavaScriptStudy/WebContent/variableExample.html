@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+// 변수 Hoisting
+for (var i = 0; i < 10; i++) {
+	console.log(i);
+}
+
+console.log("for문 밖에서 : " + i);
+
+// 전역변수 
+var message = '변수 사용 범위'; // window 객체의 key 값 message, value 값 '변수 사용 범위'
+
+console.log(message);
+console.log(window.message);
+
+function x() {
+	// 지역변수 
+	//var message2 = '메시지';
+	message2 = '메시지'; // function안에서 var를 쓰지 않으면 전역변수가 됨 
+}
+
+
+function y() {
+	console.log(message);
+	console.log(message2);
+}
+
+x();
+y();
+
+console.log(window.message2);
+
+</script>
+</body>
+</html>

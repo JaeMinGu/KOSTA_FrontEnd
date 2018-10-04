@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var message = '곰돌이입니다.....';
+var age = 30; 
+var flag = true; 
+
+console.log(typeof age); // number
+console.log(typeof flag); // boolean
+console.log(typeof message); // string
+
+console.log(message);
+console.log(message.length); // 1(ojbect) 
+console.log(message.charAt(0)); // 곰(object)
+console.log(typeof message); // object로 쓰였다가 다시 string으로 돌아옴  
+
+var message2 = new String('곰돌이입니다.....'); // 레퍼런스타입 객체(object) 
+console.log(typeof message2); // object 
+
+console.log(message == message2); // true ('곰돌이입니다....'라고 하는 값은 같기 때문)
+console.log(message === message2); // false (string 과 object로 type은 서로 다르기 때문)
+
+
+</script>
+</body>
+</html>
