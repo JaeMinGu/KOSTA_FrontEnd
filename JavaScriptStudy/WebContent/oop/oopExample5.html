@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+</head>
+<body>
+<script type="text/javascript">
+//var product = new Object();
+
+/* var product = {};
+product.name = '7D 건조망고 '; 
+product.type = '당절임 '; 
+product.element = '망고, 설탕'; 
+product.origin = '필리핀'; 
+ */
+
+ var product = {
+	name : '7D 건조망고 ', 
+	type : '당절임 ',
+	element : '망고, 설탕', 
+	origin : '필리핀',
+	price : 700
+ };
+ 
+ // 동적 메소드 추가 
+product.toString = function () {
+	return this.name + "\t" + this.type; 
+}
+ 
+
+ 
+console.log(product.name);
+console.log(product['type']);
+console.log(product['price']);
+
+console.log(product.toString());
+
+delete product.price; 
+console.log(product.price);
+
+for ( var name in product) {
+	console.log(name + " : " + product[name]);
+}
+
+var string = new String('댕댕댕');
+for ( var index in string) {
+	console.log(index + " : " + string[index]);	
+}
+
+console.log('type' in product);
+
+
+</script>
+</body>
+</html>

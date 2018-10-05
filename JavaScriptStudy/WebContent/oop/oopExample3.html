@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src= "../js/Student.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+var student  = new Student('최재민', 83, 40, 29, 87);
+console.log("총점: " + student.getSum());
+console.log("평균: " + student.getAverage());
+console.log(student.toString());
+
+console.log(student.constructor);
+console.log(Student);
+
+var student2= student.constructor('aaa', 10, 20, 30, 40);
+console.log(student2);
+
+console.log(Student.toString()); // Function의 prototype 객체의 toString();
+console.log(student.toString()); // Object의 prototype 객체의 tosString();
+
+
+</script>
+</body>
+</html>

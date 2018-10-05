@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+	function Shape(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	Shape.prototype.getArea = function() {
+		return 0;
+	}
+
+	Shape.prototype.getRound = function() {
+		return 0;
+	}
+
+	function Rectangle(x, y, width, height) {
+		Shape.call(this, x, y);
+		this.width = width;
+		this.height = height;
+	}
+
+	Rectangle.prototype = new Shape(0, 0);
+	Rectangle.prototype.getArea = function() {
+		return (this.width * this.height);
+	}
+
+	Rectangle.prototype.getRound = function() {
+		return ((this.width + this.height) * 2);
+	}
+	
+ 	Rectangle.prototype.constructor = Rectangle; 
+	
+</script>
+</head>
+<body>
+  <script type="text/javascript">
+			var shape = new Shape(10, 20);
+			console.log("면적: " + shape.getArea());
+			console.log("둘레: " + shape.getRound());
+			
+			var rectangle = new Rectangle(10, 20, 50, 30);
+			console.log("면적: " + rectangle.getArea());
+			console.log("둘레: " + rectangle.getRound());
+		</script>
+
+</body>
+</html>

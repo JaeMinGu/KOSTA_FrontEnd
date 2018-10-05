@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+// 내장 개체 테스트 
+var string = new String('인절미');
+console.log(string.charAt(1));
+
+var today = new Date();
+console.log(today.toString());
+
+var array = new Array();
+array.push(1);
+array.push('댕댕이');
+console.log(array.pop()); // 댕댕이
+console.log(array.pop()); // 1
+
+var sum = new Function("x", "y", "return x + y"); // javaScript에서 중요한 역할 (cf. Java의 Object) 
+console.log(sum(10, 20));
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
