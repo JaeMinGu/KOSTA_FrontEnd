@@ -36,8 +36,9 @@ window.onload =  function(){
 	}
 	
 	
-	document.getElementById("button2").onclick = function(e){
+	document.getElementById("button2").onclick = function(e){ //event객체를 받기 위한 변수 선언 
 		var event = e || window.event;
+	
 		console.log(event.type);
 		event.target.style.backgroundColor = "tomato";
 		for ( var key in event) {

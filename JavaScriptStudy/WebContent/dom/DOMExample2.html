@@ -12,14 +12,15 @@
 	var text = document.createTextNode("안녕하세요 DOM");
 	element.appendChild(text);
 	
-	//document.getElementsByTagName("body").item(0).appendChild(element);
-	document.body.appendChild(element);
+	//document.getElementsByTagName("body").item(0).appendChild(element); //정통DOM, 표준DOM
+	document.body.appendChild(element); //간결화한 것, 익스플로러에서는 안 될 수도 있음 
 
 	var imgE = document.createElement("img");
 	//imgE.src = "icons5575.png";
 	imgE.setAttribute("src", "icons4681.png");
 	document.body.appendChild(imgE);
 
+	// 쉽게 DOM처리 하는 방법, 익스프로러가 최초로 사용한 property 
 	document.body.innerHTML += "<h2>동적 엘리먼트 추가</h2>";
 	document.body.innerHTML += "<img src='icons5575.png'/>";
 </script>

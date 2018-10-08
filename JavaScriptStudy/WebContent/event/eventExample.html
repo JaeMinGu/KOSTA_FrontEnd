@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+</head>
+<body>
+
+<input type="button" value="클릭하세요. 자바스크립트" id="myButton">
+
+<script type="text/javascript">
+var eventSource = document.getElementById("myButton");
+var eventListener = document.body;
+
+function someDo() {
+	alert('헐랭이...');
+}
+// 이벤트소스에 이벤트리스너 등록 
+eventSource.onclick = function () {
+	console.log("왜 눌렀어??????");
+}
+
+// 고전 이벤트 처리 모델 (가장 많이 사용)
+//eventSource.onclick = someDo;
+
+// 표준 이벤트 처리 모델 
+eventSource.addEventListener("click", someDo, false); // 맨 마지막: 캡처링 지원여부(cf.거의 쓰지 않는 기능이라 default는 false) 
+
+// 익스플로러 이벤트 처리 모델 
+//eventSource.attachEvent("onclick", someDo);
+
+</script>
+</body>
+</html>

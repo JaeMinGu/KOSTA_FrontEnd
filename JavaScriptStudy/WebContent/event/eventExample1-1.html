@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+<script type="text/javascript">
+window.onload = function () {
+	//console.log("DOMTree가 메모리에 완성됨.....");
+	init();
+	eventRegist();
+}
+
+function init() {
+	//초기화 작업
+	
+}
+
+function eventRegist() {
+	//버튼 클릭 시 종료 
+	document.getElementById("myButton").onclick = function () {
+		exit();
+	}
+}
+
+/** 이벤트소스에 이벤트리스너 등록 */
+function exit() {
+	close();
+}
+
+</script>
+</head>
+<body>
+
+<input type="button" value="클릭하세요. 자바스크립트" id="myButton">
+
+</body>
+</html>

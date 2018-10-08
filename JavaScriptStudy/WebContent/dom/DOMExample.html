@@ -15,5 +15,17 @@
 <h2>EVENT이란 </h2>
 <p>자리돔이 최고여..........</p>
 
+
+<script type="text/javascript">
+// DOM API를 이용한 DOM 객체 접근 
+var array = document.getElementsByTagName("h2")
+//console.log(array.length); //3
+for ( var i=0; i<array.length; i++) {
+	var obj = array[i];
+	//console.log(obj.constructor);
+	obj.style = "color: red";
+}
+
+</script>
 </body>
 </html>

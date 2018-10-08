@@ -19,7 +19,7 @@ window.onload = function () {
 		var name = document.forms[0].elements[0].value;
 		if(name == null || name.length == 0){
 			alert('이름을 입력하여 주세요.');
-			 document.myForm.name.focus();
+			 document.myForm.name.focus(); // 다시 커서 깜빡거리게
 			return false; // 디폴트 이벤트핸들러 제거
 		}
 		return true;
