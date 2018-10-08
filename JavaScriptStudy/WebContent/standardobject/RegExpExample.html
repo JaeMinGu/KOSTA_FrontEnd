@@ -8,13 +8,13 @@
 <script>
 // 명시적 생성
 var regExp = new RegExp("패턴");
-console.log(regExp.constructor);
+console.log(regExp.constructor);// object의 타입 비교 시 유용 
 // 묵시적 생성
-console.log(typeof /패턴/);
+console.log(typeof /패턴/); 
 
 var str = "The quick brown fox jumps over th lazy dog.";
 //var ss = str.split(new RegExp("\\s"));
-var tokens = str.split(/\s/);
+var tokens = str.split(/\s/); // s는 의미있는 문자(스페이스를 나타냄)로 쓰이기 때문에 \추가
 for ( var i in tokens) {
 	console.log(tokens[i]);
 }

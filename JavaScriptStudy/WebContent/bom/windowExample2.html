@@ -10,8 +10,8 @@
 
 //window.open();
 //open("http://www.naver.com");
-//open("http://www.naver.com", "myWindow");
-//open("http://www.naver.com", "myWindow", "width=200, height=100");
+//open("http://www.naver.com", "myWindow"); // 창의 이름 지정
+//open("http://www.naver.com", "myWindow", "width=200, height=100"); // 창의 크기 지정
 //open("http://www.w3schools.com", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=200, left=200, width=400, height=400");
 
 function openWindow() {
@@ -28,8 +28,14 @@ function closeWindow() {
 window.setTimeout(function(){
 	//alert("경고창입니다..");
 	openWindow();
-}, 3000);
+}, 3000); //3초 후에 실행 
 
+
+/* 
+window.setInterval(function() {
+	openWindow();
+}, 3000);// 3초마다 실행 
+ */
 </script>
 
 </body>

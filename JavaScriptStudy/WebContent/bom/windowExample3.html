@@ -10,7 +10,7 @@
 (function(){
 	var windowWidth = 400;
 	var windowHeight = 200;
-	var x = (screen.width - windowWidth) / 2;
+	var x = (screen.width - windowWidth) / 2; // 가운데 배치
 	var y = (screen.height - windowHeight) / 2;
 	clockWindow = open("", "clockWindow", "left="+x+", top="+y+", width="+windowWidth+", height="+windowHeight);
 })();
@@ -19,7 +19,7 @@ window.setInterval(function(){
 	var now = new Date();
 	//document.write("<p style='text-align:center'>" + now.toLocaleString() + "</p>");
 	clockWindow.document.write("<p style='text-align:center'>" + now.toLocaleString() + "</p>");
-}, 1000);
+}, 1000); // 1초 단위로 계속 호출 
 
 </script>
 </body>
